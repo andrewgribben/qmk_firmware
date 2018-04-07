@@ -10,6 +10,8 @@
 enum chimera_ergo_layers
 {
 	_QWERTY,
+	_VIMISH,
+	_YTREWQ,
 	_CAPS,
 	_NUMPAD,
 	_SYMBOLS,
@@ -22,13 +24,17 @@ enum chimera_ergo_layers
 #define KC_SPFN LT(_NAV,KC_EQL)
 #define KC_SCTL MT(MOD_LCTL, KC_LBRC)
 #define KC_SALT MT(MOD_LALT, KC_SPC)
+#define KC_LSPC LT(_YTREWQ, KC_SPC)
 #define KC_SCTR MT(MOD_LCTL, KC_RBRC)
 #define KC_SPLT MT(MOD_LALT, KC_MINS)
 #define KC_SPRT MT(MOD_LALT, KC_1)
+#define KC_LESC MT(KC_ESC, KC_GRV)
 #define KC_GBRC MT(MOD_RGUI, KC_RBRC)
 #define KC_GQOT MT(MOD_LGUI, KC_QUOT)
 #define KC_MESC LT(_MACROS, KC_ESC)
 #define KC_RENT LCTL_T(KC_ENT)
+#define KC_LTAB LT(_VIMISH, KC_TAB)
+#define KC_RQUO LT(_NUMPAD, KC_QUOT)
 #define KC_INCL M(0)
 #define KC_PULL M(1)
 #define KC_PUSH M(2)
@@ -50,16 +56,41 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //,----+----+----+----+----+----.     ,----+----+----+----+----+----.
      GESC, 1  ,2   ,3   ,4   , 5  ,       6  ,7   ,8   ,9   , 0  ,BSPC,
   //|----+----+----+----+----+----|     |----+----+----+----+----+----|
-     TAB, Q  , W  , E  , R  , T  ,       Y  , U  , I  , O  , P   ,QUOT,
+     LTAB, Q  , W  , E  , R  , T  ,       Y  , U  , I  , O  , P  ,RQUO,
   //|----+----+----+----+----+----|     |----+----+----+----+----+----|
      LBRC, A  , S  , D  , F  , G  ,       H  , J  , K  , L  ,SCLN,RBRC,
   //|----+----+----+----+----+----|     |----+----+----+----+----+----|
      LSPO, Z  , X  , C  , V  , B  ,       N  , M  ,COMM,DOT ,SLSH,RSPC,
   //|----+----+----+----+----+----|     |----+----+----+----+----+----|
-                         SALT,LGUI,      RENT,SALT
+                         LSPC,LGUI,      RENT,SALT
   // \------------------+----+----/      \---+----+----+--------------/
   ),
-
+  [_VIMISH] = KC_KEYMAP(
+  //,----+----+----+----+----+----.     ,----+----+----+----+----+----.
+     GRV , 1  ,2   ,3   ,4   , 5  ,       6  ,7   ,8   ,9   , 0  ,BSLS,
+  //|----+----+----+----+----+----|     |----+----+----+----+----+----|
+     LTAB, Q  , W  , E  , R  , T  ,       Y  ,PGDN,PGUP, O  , P  ,RQUO,
+  //|----+----+----+----+----+----|     |----+----+----+----+----+----|
+     LBRC, A  , S  , D  , F  , G  ,      LEFT,DOWN, UP ,RGHT,SCLN,RBRC,
+  //|----+----+----+----+----+----|     |----+----+----+----+----+----|
+     LSPO, Z  , X  , C  , V  , B  ,       N  , M  ,COMM,DOT ,SLSH,RSPC,
+  //|----+----+----+----+----+----|     |----+----+----+----+----+----|
+                         LSPC,LGUI,      RENT,SALT
+  // \------------------+----+----/      \---+----+----+--------------/
+  ),
+  [_YTREWQ] = KC_KEYMAP(
+  //,----+----+----+----+----+----.     ,----+----+----+----+----+----.
+     BSPC, 0  ,9   ,8   ,7   , 6  ,       6  ,7   ,8   ,9   , 0  ,BSPC,
+  //|----+----+----+----+----+----|     |----+----+----+----+----+----|
+     RQUO, P  , O  , I  , U  , Y  ,       Y  , U  , I  , O  , P , RQUO,
+  //|----+----+----+----+----+----|     |----+----+----+----+----+----|
+     RBRC,SCLN, L  , K  , J  , H  ,       H  , J  , K  , L  ,SCLN,RBRC,
+  //|----+----+----+----+----+----|     |----+----+----+----+----+----|
+     RSPC,SLSH,DOT ,COMM, M  , N  ,       N  , M  ,COMM,DOT ,SLSH,RSPC,
+  //|----+----+----+----+----+----|     |----+----+----+----+----+----|
+                         LSPC,RENT,      RENT,SALT
+  // \------------------+----+----/      \---+----+----+--------------/
+  ),
   [_CAPS] = KC_KEYMAP(
   //,----+----+----+----+----+----.     ,----+----+----+----+----+----.
          ,UNDS,    ,    ,    ,    ,          ,    ,    ,    ,    ,    ,
@@ -186,6 +217,12 @@ void matrix_scan_user(void) {
     	case _QWERTY:
     	    set_led_green;
     	    break;
+        case _VIMISH:
+	    set_led_white;
+	    break;
+        case _YTREWQ:
+	    set_led_magenta;
+	    break;
         case _CAPS:
 	    set_led_white;
 	    break;
