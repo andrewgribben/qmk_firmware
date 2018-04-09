@@ -35,6 +35,8 @@ enum chimera_ergo_layers
 #define KC_RENT LCTL_T(KC_ENT)
 #define KC_LTAB LT(_VIMISH, KC_TAB)
 #define KC_RQUO LT(_NUMPAD, KC_QUOT)
+#define KC_LLCT LCTL_T(KC_LBRC)
+#define KC_RRCT RGUI_T(KC_RBRC)
 #define KC_INCL M(0)
 #define KC_PULL M(1)
 #define KC_PUSH M(2)
@@ -54,26 +56,26 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [_QWERTY] = KC_KEYMAP(
   //,----+----+----+----+----+----.     ,----+----+----+----+----+----.
-     GESC, 1  ,2   ,3   ,4   , 5  ,       6  ,7   ,8   ,9   , 0  ,BSPC,
+     GRV, 1  ,2   ,3   ,4   , 5  ,       6  ,7   ,8   ,9   , 0  ,BSPC,
   //|----+----+----+----+----+----|     |----+----+----+----+----+----|
      LTAB, Q  , W  , E  , R  , T  ,       Y  , U  , I  , O  , P  ,RQUO,
   //|----+----+----+----+----+----|     |----+----+----+----+----+----|
-     LBRC, A  , S  , D  , F  , G  ,       H  , J  , K  , L  ,SCLN,RBRC,
+     LSPO, A  , S  , D  , F  , G  ,       H  , J  , K  , L  ,SCLN,RSPC,
   //|----+----+----+----+----+----|     |----+----+----+----+----+----|
-     LSPO, Z  , X  , C  , V  , B  ,       N  , M  ,COMM,DOT ,SLSH,RSPC,
+     LLCT, Z  , X  , C  , V  , B  ,       N  , M  ,COMM,DOT ,SLSH,RRCT,
   //|----+----+----+----+----+----|     |----+----+----+----+----+----|
                          LSPC,LGUI,      RENT,SALT
   // \------------------+----+----/      \---+----+----+--------------/
   ),
   [_VIMISH] = KC_KEYMAP(
   //,----+----+----+----+----+----.     ,----+----+----+----+----+----.
-     GRV , 1  ,2   ,3   ,4   , 5  ,       6  ,7   ,8   ,9   , 0  ,BSLS,
+     ESC , 1  ,2   ,3   ,4   , 5  ,       6  ,7   ,8   ,9   ,0   ,MINS,
   //|----+----+----+----+----+----|     |----+----+----+----+----+----|
      LTAB, Q  , W  , E  , R  , T  ,       Y  ,PGDN,PGUP, O  , P  ,RQUO,
   //|----+----+----+----+----+----|     |----+----+----+----+----+----|
-     LBRC, A  , S  , D  , F  , G  ,      LEFT,DOWN, UP ,RGHT,SCLN,RBRC,
+     LSPO, A  , S  , D  , F  , G  ,      LEFT,DOWN, UP ,RGHT,SCLN,RSPC,
   //|----+----+----+----+----+----|     |----+----+----+----+----+----|
-     LSPO, Z  , X  , C  , V  , B  ,       N  , M  ,COMM,DOT ,SLSH,RSPC,
+     LLCT, Z  , X  , C  , V  , B  ,       N  , M  ,COMM,DOT ,SLSH,RRCT,
   //|----+----+----+----+----+----|     |----+----+----+----+----+----|
                          LSPC,LGUI,      RENT,SALT
   // \------------------+----+----/      \---+----+----+--------------/
@@ -84,9 +86,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|----+----+----+----+----+----|     |----+----+----+----+----+----|
      RQUO, P  , O  , I  , U  , Y  ,       Y  , U  , I  , O  , P , RQUO,
   //|----+----+----+----+----+----|     |----+----+----+----+----+----|
-     RBRC,SCLN, L  , K  , J  , H  ,       H  , J  , K  , L  ,SCLN,RBRC,
+     RSPC,SCLN, L  , K  , J  , H  ,       H  , J  , K  , L  ,SCLN,RSPC,
   //|----+----+----+----+----+----|     |----+----+----+----+----+----|
-     RSPC,SLSH,DOT ,COMM, M  , N  ,       N  , M  ,COMM,DOT ,SLSH,RSPC,
+     RRCT,SLSH,DOT ,COMM, M  , N  ,       N  , M  ,COMM,DOT ,SLSH,RRCT,
   //|----+----+----+----+----+----|     |----+----+----+----+----+----|
                          LSPC,RENT,      RENT,SALT
   // \------------------+----+----/      \---+----+----+--------------/
@@ -107,15 +109,15 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [_NUMPAD] = KC_KEYMAP(
   //,----+----+----+----+----+----.     ,----+----+----+----+----+----.
-         ,    ,    ,    ,    ,    ,          , 7  , 8  , 9  ,SLSH,    ,
+     VOLD,VOLU,MRWD,MPLY,MFFD,    ,          , 7  , 8  , 9  ,SLSH,    ,
   //|----+----+----+----+----+----|     |----+----+----+----+----+----|
          ,    ,COLN,    ,    ,    ,          , 4  , 5  , 6  ,ASTR,    ,
   //|----+----+----+----+----+----|     |----+----+----+----+----+----|
          ,    ,DOT ,    ,    ,    ,          , 1  , 2  , 3  ,MINS,    ,
   //|----+----+----+----+----+----|     |----+----+----+----+----+----|
-         ,    ,    ,    ,    ,    ,          , 0  ,    ,DOT ,PLUS,    ,
+         ,    ,    ,    ,    ,    ,          , 0  ,EQL ,DOT ,PLUS,    ,
   //|----+----+----+----+----+----|     |----+----+----+----+----+----|
-                             ,    ,          ,  
+                             ,    ,          ,
   // \------------------+----+----/      \---+----+----+--------------/
   ),
 

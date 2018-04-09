@@ -54,7 +54,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #define PREVENT_STUCK_MODIFIERS
 /* Tell iPads that they can power this device */
-#define USB_MAX_POWER_CONSUMPTION 50
+#define USB_MAX_POWER_CONSUMPTION 100
 /* disable debug print */
 //#define NO_DEBUG
 
