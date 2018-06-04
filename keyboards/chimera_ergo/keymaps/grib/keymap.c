@@ -34,7 +34,8 @@ enum chimera_ergo_layers
 #define KC_MESC LT(_MACROS, KC_ESC)
 #define KC_RENT LCTL_T(KC_ENT)
 #define KC_LTAB LT(_VIMISH, KC_TAB)
-#define KC_RQUO LT(_NUMPAD, KC_QUOT)
+#define KC_RQUO RSFT(KC_QUOT)
+#define KC_LQUO LSFT(KC_GRV)
 #define KC_RSLA LT(_NUMPAD, KC_BSLS)
 #define KC_LLCT LCTL_T(KC_LBRC)
 #define KC_RRCT RGUI_T(KC_RBRC)
@@ -61,7 +62,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|----+----+----+----+----+----|     |----+----+----+----+----+----|
      LTAB, Q  , W  , E  , R  , T  ,       Y  , U  , I  , O  , P  ,RSLA,
   //|----+----+----+----+----+----|     |----+----+----+----+----+----|
-     LSPO, A  , S  , D  , F  , G  ,       H  , J  , K  , L  ,SCLN,RSPC,
+     LQUO, A  , S  , D  , F  , G  ,       H  , J  , K  , L  ,SCLN,RQUO,
   //|----+----+----+----+----+----|     |----+----+----+----+----+----|
      LLCT, Z  , X  , C  , V  , B  ,       N  , M  ,COMM,DOT ,SLSH,RRCT,
   //|----+----+----+----+----+----|     |----+----+----+----+----+----|
@@ -74,7 +75,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|----+----+----+----+----+----|     |----+----+----+----+----+----|
      LTAB, Q  , W  , E  , R  , T  ,       Y  ,PGDN,PGUP, O  , P  ,RSLA,
   //|----+----+----+----+----+----|     |----+----+----+----+----+----|
-     LSPO, A  , S  , D  , F  , G  ,      LEFT,DOWN, UP ,RGHT,SCLN,RSPC,
+     LQUO, A  , S  , D  , F  , G  ,      LEFT,DOWN, UP ,RGHT,SCLN,RQUO,
   //|----+----+----+----+----+----|     |----+----+----+----+----+----|
      LLCT, Z  , X  , C  , V  , B  ,       N  , M  ,COMM,DOT ,SLSH,RRCT,
   //|----+----+----+----+----+----|     |----+----+----+----+----+----|
@@ -87,7 +88,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|----+----+----+----+----+----|     |----+----+----+----+----+----|
      RSLA, P  , O  , I  , U  , Y  ,       Y  , U  , I  , O  , P , RQUO,
   //|----+----+----+----+----+----|     |----+----+----+----+----+----|
-     RSPC,SCLN, L  , K  , J  , H  ,       H  , J  , K  , L  ,SCLN,RSPC,
+     RQUO,SCLN, L  , K  , J  , H  ,       H  , J  , K  , L  ,SCLN,RSPC,
   //|----+----+----+----+----+----|     |----+----+----+----+----+----|
      RRCT,SLSH,DOT ,COMM, M  , N  ,       N  , M  ,COMM,DOT ,SLSH,RRCT,
   //|----+----+----+----+----+----|     |----+----+----+----+----+----|
