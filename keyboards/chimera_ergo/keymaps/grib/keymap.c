@@ -97,7 +97,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
   [_NUMPAD] = KC_KEYMAP(
   //,----+----+----+----+----+----.     ,----+----+----+----+----+----.
-    VOLD, VOLU,MRWD,MPLY,MFFD     ,          , 7  , 8  , 9  ,SLSH,    ,
+    VOLD, VOLU,MRWD,MPLY,MFFD,    ,          , 7  , 8  , 9  ,SLSH,    ,
   //|----+----+----+----+----+----|     |----+----+----+----+----+----|
          ,EXLM,AT  ,LCBR,RCBR,PIPE,          , 4  , 5  , 6  ,ASTR,    ,
   //|----+----+----+----+----+----|     |----+----+----+----+----+----|
