@@ -39,7 +39,7 @@ enum chimera_ergo_layers
 #define KC_RSLA LT(_NUMPAD, KC_BSLS)
 #define KC_LLCT LCTL_T(KC_LBRC)
 #define KC_RRCT RGUI_T(KC_RBRC)
-#define KC_XALT LALT(KC_Z)
+#define KC_XALT ALT_T(KC_Z)
 #define KC_INCL M(0)
 #define KC_PULL M(1)
 #define KC_PUSH M(2)
