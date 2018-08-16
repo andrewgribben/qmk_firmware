@@ -19,26 +19,15 @@ enum chimera_ergo_layers
 	_NAV
 };
 
-#define KC_NMPD TG(_NUMPAD)
-#define KC_SYMB TG(_SYMBOLS)
-#define KC_SPFN LT(_NAV,KC_EQL)
-#define KC_SCTL MT(MOD_LCTL, KC_LBRC)
+#define KC_LLCT LCTL_T(KC_LBRC)
 #define KC_SALT MT(MOD_LALT, KC_SPC)
-#define KC_LSPC LT(_YTREWQ, KC_SPC)
-#define KC_SCTR MT(MOD_LCTL, KC_RBRC)
-#define KC_SPLT MT(MOD_LALT, KC_MINS)
-#define KC_SPRT MT(MOD_LALT, KC_1)
-#define KC_LESC MT(KC_ESC, KC_GRV)
-#define KC_GBRC MT(MOD_RGUI, KC_RBRC)
-#define KC_GQOT MT(MOD_LGUI, KC_QUOT)
-#define KC_MESC LT(_MACROS, KC_ESC)
+#define KC_LSPC LT(_CAPS, KC_SPC)
+#define KC_LTAB LT(_SYMBOLS, KC_TAB)
+#define KC_RSLA LT(_NUMPAD, KC_BSLS)
 #define KC_RENT LCTL_T(KC_ENT)
-#define KC_LTAB LT(_VIMISH, KC_TAB)
+#define KC_RRCT RGUI_T(KC_RBRC)
 #define KC_RQUO SFT_T(KC_QUOT)
 #define KC_LQUO SFT_T(KC_GRV)
-#define KC_RSLA LT(_NUMPAD, KC_BSLS)
-#define KC_LLCT LCTL_T(KC_LBRC)
-#define KC_RRCT RGUI_T(KC_RBRC)
 #define KC_XALT ALT_T(KC_Z)
 #define KC_INCL M(0)
 #define KC_PULL M(1)
@@ -168,7 +157,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 };
 
-
 const uint16_t PROGMEM fn_actions[] = {
 
 };
@@ -221,12 +209,6 @@ void matrix_scan_user(void) {
     	case _QWERTY:
     	    set_led_green;
     	    break;
-        case _VIMISH:
-	    set_led_white;
-	    break;
-        case _YTREWQ:
-	    set_led_magenta;
-	    break;
         case _CAPS:
 	    set_led_white;
 	    break;

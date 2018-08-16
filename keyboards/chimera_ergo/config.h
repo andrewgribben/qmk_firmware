@@ -40,7 +40,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //#define BACKLIGHT_LEVELS 3
 
 #define ONESHOT_TIMEOUT 500
+#define USB_MAX_POWER_CONSUMPTION 50
 
+#define LSPO_KEY KC_GRV
+#define RSPC_KEY KC_QUOT
+#define DISABLE_SPACE_CADET_ROLLOVER
 
 /* key combination for command */
 #define IS_COMMAND() ( \
