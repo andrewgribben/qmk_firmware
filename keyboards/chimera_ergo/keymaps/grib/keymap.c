@@ -22,7 +22,6 @@ enum chimera_ergo_layers
 #define KC_LLCT LCTL_T(KC_LBRC)
 #define KC_SALT MT(MOD_LALT, KC_SPC)
 #define KC_LSPC LT(_CAPS, KC_SPC)
-#define KC_LTAB LT(_SYMBOLS, KC_TAB)
 #define KC_RSLA LT(_NUMPAD, KC_BSLS)
 #define KC_RENT LCTL_T(KC_ENT)
 #define KC_RRCT RGUI_T(KC_RBRC)
@@ -35,6 +34,11 @@ enum chimera_ergo_layers
 #define KC_SCAP M(3)
 #define KC_SCOF M(4)
 #define KC_CAD LALT(LCTL(KC_DEL))
+#define KC_LTAB LT(_VIMISH, KC_TAB)
+
+
+
+
 
 #define LONGPRESS_DELAY 150
 //#define LAYER_TOGGLE_DELAY 300
