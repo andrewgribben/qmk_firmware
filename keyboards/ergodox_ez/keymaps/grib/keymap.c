@@ -10,6 +10,8 @@
 #define YTREWQ 4 // media keys
 
 
+#define LONGPRESS_DELAY 5000
+#define LAYER_TOGGLE_DELAY 5000
 
 #define KC_SALT MT(MOD_LALT, KC_SPC)
 #define KC_RENT LCTL_T(KC_ENT)
@@ -39,7 +41,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         CTL_T(KC_LBRC), KC_LALT, KC_HYPR,KC_LEFT,KC_RGHT,
                                                LT(SYMB,KC_ESC),  TG(SYMB),
                                                               KC_HOME,
-                                               LT(YTREWQ,KC_SPC),KC_LGUI,KC_END,
+                                              LT(YTREWQ,KC_SPC),KC_LGUI,KC_END,
         // right hand
              KC_MINS,     KC_6,   KC_7,  KC_8,   KC_9,   KC_0,             KC_BSPC,
              KC_PAUSE,    KC_Y,   KC_U,  KC_I,   KC_O,   KC_P,             LT(SYMB,KC_RQUO),
