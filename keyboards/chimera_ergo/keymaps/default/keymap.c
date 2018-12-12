@@ -17,24 +17,25 @@ enum chimera_ergo_layers
   _NAV
 };
 
-#define SC_NMPD TG(_NUMPAD)
-#define SC_SYMB TG(_SYMBOLS)
-#define SC_SPFN LT(_NAV,KC_EQL)
-#define SC_SCTL MT(MOD_LCTL, KC_LBRC)
-#define SC_SCTR MT(MOD_LCTL, KC_RBRC)
-#define SC_SPLT MT(MOD_LALT, KC_MINS)
-#define SC_SPRT MT(MOD_LALT, KC_1)
-#define SC_GBRC MT(MOD_RGUI, KC_RBRC)
-#define SC_MESC LT(_MACROS, KC_ESC)
-#define SC_INCL M(0)
-#define SC_PULL M(1)
-#define SC_PUSH M(2)
-#define SC_SCAP M(3)
-#define SC_SCOF M(4)
-#define SC_CAD LALT(LCTL(KC_DEL))
+#define KC_NMPD TG(_NUMPAD)
+#define KC_SYMB TG(_SYMBOLS)
+#define KC_SPFN LT(_NAV,KC_4)
+#define KC_SCTL MT(MOD_LCTL, KC_2)
+#define KC_SCTR MT(MOD_LCTL, KC_9)
+#define KC_SPLT MT(MOD_LALT, KC_3)
+#define KC_SPRT MT(MOD_LALT, KC_8)
+#define KC_GBRC MT(MOD_RGUI, KC_7)
+#define KC_GQOT MT(MOD_LGUI, KC_QUOT)
+#define KC_MESC LT(_MACROS, KC_ESC)
+#define KC_INCL M(0)
+#define KC_PULL M(1)
+#define KC_PUSH M(2)
+#define KC_SCAP M(3)
+#define KC_SCOF M(4)
+#define KC_CAD LALT(LCTL(KC_DEL))
 
-#define LONGPRESS_DELAY 150
-//#define LAYER_TOGGLE_DELAY 300
+#define LONGPRESS_DELAY 5000
+#define LAYER_TOGGLE_DELAY 5000
 
 // Fillers to make layering more clear
 #define _______ KC_TRNS

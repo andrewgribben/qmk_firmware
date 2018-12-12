@@ -1,5 +1,5 @@
-#ifndef CHIMERA_ERGO_42_H
-#define CHIMERA_ERGO_42_H
+#ifndef CHIMERA_ORTHO_PLUS_H
+#define CHIMERA_ORTHO_PLUS_H
 
 #include "quantum.h"
 #include "matrix.h"
@@ -53,27 +53,30 @@
   k00, k01, k02, k03, k04, k05,      k06, k07, k08, k09, k10, k11, \
   k12, k13, k14, k15, k16, k17,      k18, k19, k20, k21, k22, k23, \
   k24, k25, k26, k27, k28, k29,      k30, k31, k32, k33, k34, k35, \
-                 k36, k37, k38,      k39, k40, k41 \
+  k36, k37, k38, k39, k40, k41,      k42, k43, k44, k45, k46, k47, \
+                      k48, k49,      k50, k51 \
 ) \
 { \
-	{ KC_NO,    KC_##k28,    KC_##k14, KC_##k03, KC_##k16, KC_NO,         KC_##k39, KC_##k19, KC_##k08, KC_##k21, KC_NO,    KC_NO     }, \
-	{ KC_NO,    KC_##k25,    KC_##k02, KC_##k15, KC_##k04, KC_##k24,      KC_##k35, KC_##k07, KC_##k20, KC_##k09, KC_##k34, KC_NO     }, \
-	{ KC_##k00, KC_##k13,    KC_NO,    KC_##k27, KC_##k17, KC_##k37,      KC_##k40, KC_##k18, KC_##k32, KC_NO,    KC_##k22, KC_##k11  }, \
-	{ KC_##k12, KC_##k01,    KC_##k26, KC_NO,    KC_##k05, KC_##k36,      KC_##k41, KC_##k06, KC_NO,    KC_##k33, KC_##k10, KC_##k23  },  \
-	{ KC_##k29, KC_##k38,    KC_NO,    KC_##k28, KC_##k25, KC_NO,         KC_##k30, KC_##k31, KC_NO,    KC_NO,    KC_##k34, KC_NO     }, \
+	{ KC_##k03,    KC_##k40,    KC_##k26, KC_##k15, KC_##k28, KC_##k01,      KC_##k42, KC_##k31, KC_##k20, KC_##k33, KC_##k08,    KC_##k10     }, \
+	{ KC_##k00, KC_##k37,    KC_##k14, KC_##k27, KC_##k16, KC_##k36,      KC_##k47, KC_##k19, KC_##k32, KC_##k21, KC_##k46,    KC_##k11  }, \
+	{ KC_##k12, KC_##k25, KC_##k02, KC_##k39, KC_##k17, KC_##k49,      KC_##k50, KC_##k18, KC_##k44, KC_##k09, KC_##k34, KC_##k23  }, \
+	{ KC_##k24, KC_##k13, KC_##k38, KC_##k04, KC_##k05, KC_##k48,      KC_##k51, KC_##k06, KC_##k07, KC_##k45, KC_##k22, KC_##k35  },  \
+	{ KC_##k29, KC_##k41, KC_##k03, KC_##k40, KC_##k37, KC_G,         KC_##k30, KC_##k43, KC_##k08, KC_##k10, KC_##k46, KC_H     }, \
 }
 
 #define KEYMAP( \
   k00, k01, k02, k03, k04, k05,      k06, k07, k08, k09, k10, k11, \
   k12, k13, k14, k15, k16, k17,      k18, k19, k20, k21, k22, k23, \
   k24, k25, k26, k27, k28, k29,      k30, k31, k32, k33, k34, k35, \
-                 k36, k37, k38,      k39, k40, k41 \
+  k36, k37, k38, k39, k40, k41,      k42, k43, k44, k45, k46, k47, \
+                      k48, k49,      k50, k51 \
 ) \
 { \
-	{ KC_NO, KC_NO, k14,   k03,   k16, KC_NO,         k39, k19, k08,   k21,   KC_NO, KC_NO  }, \
-	{ KC_NO, KC_NO, k02,   k15,   k04, k24,           k35, k07, k20,   k09,   KC_NO, KC_NO  }, \
-	{ k00,   k13,   KC_NO, k27,   k17, k37,           k40, k18, k32,   KC_NO, k22,   k11    }, \
-	{ k12,   k01,   k26,   KC_NO, k05, k36,           k41, k06, KC_NO, k33,   k10,   k23    },  \
-	{ k29,   k38,   KC_NO, k28,   k25, KC_NO,         k30, k31, KC_NO, KC_NO, k34,   KC_NO  }, \
+	{ KC_NO, KC_NO, k26, k15, k28, k01,      k42, k31, k20, k33, KC_NO, KC_NO  }, \
+	{ k00,   KC_NO, k14, k27, k16, k36,      k47, k19, k32, k21, KC_NO, k11    }, \
+	{ k12,   k25,   k02, k39, k17, k49,      k50, k18, k44, k09, k34,   k23    }, \
+	{ k24,   k13,   k38, k04, k05, k48,      k51, k06, k07, k45, k22,   k35    },  \
+	{ k29,   k41,   k03, k40, k37, KC_NO,    k30, k43, k08, k10, k46,   KC_NO  }, \
 }
+
 #endif
