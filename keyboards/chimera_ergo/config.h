@@ -34,15 +34,16 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define MATRIX_COLS 12
 
 /* define if matrix has ghost */
-//#define MATRIX_HAS_GHOST
+//#define MATRIX_HAS_GHOuT
 
 /* number of backlight levels */
 //#define BACKLIGHT_LEVELS 3
 
 #define ONESHOT_TIMEOUT 500
-#define USB_MAX_POWER_CONSUMPTION 50
-
+#define USB_MAX_POWER_CONSUMPTION 100
+#define PERMISSIVE_HOLD
 #define LSPO_KEY KC_GRV
+#define IGNORE_MOD_TAP_INTERRUPT
 #define RSPC_KEY KC_QUOT
 #define DISABLE_SPACE_CADET_ROLLOVER
 
