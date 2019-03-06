@@ -40,7 +40,7 @@ enum chimera_ergo_layers
 
 
 #define LONGPRESS_DELAY 5000
-#define LAYER_OGGLE_DELAY 5000
+#define LAYER_TOGGLE_DELAY 5000
 
 
 

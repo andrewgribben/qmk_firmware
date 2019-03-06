@@ -23,6 +23,10 @@
 #define KC_RRCT RGUI_T(KC_RBRC)
 
 
+#define LONGPRESS_DELAY 5000
+#define LAYER_TOGGLE_DELAY 5000
+
+
 enum custom_keycodes {
   PLACEHOLDER = SAFE_RANGE, // can always be here
   EPRM,
