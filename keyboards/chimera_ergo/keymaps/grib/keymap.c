@@ -19,7 +19,7 @@ enum chimera_ergo_layers
 	_MACROS,
 	_NAV
 };
-
+																										
 #define KC_LLCT LCTL_T(KC_LBRC)
 #define KC_SALT MT(MOD_LALT, KC_SPC)
 #define KC_LSPC LT(_CAPS, KC_SPC)
@@ -76,18 +76,18 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|----+----+----+----+----+----|     |----+----+----+----+----+----|
                          LSPC,LGUI,      RENT,SALT
   // \------------------+----+----/      \---+----+----+--------------/
-  ),
+  ),	
   [_VIMISH] = KC_KEYMAP(
   //,----+----+----+----+----+----.     ,----+----+----+----+----+----.
      ESC , 1  ,2   ,3   ,4   , 5  ,       6  ,7   ,8   ,9   ,0   ,MINS,
   //|----+----+----+----+----+----|     |----+----+----+----+----+----|
-     LTAB, Q  , W  , E  , R  , T  ,       Y  ,PGDN,PGUP, O  , P  ,RSLA,
+     LTAB, Q  ,WH_D,MS_U,WH_U, T  ,       Y  ,PGDN,PGUP, O  , P  ,RSLA,
   //|----+----+----+----+----+----|     |----+----+----+----+----+----|
-     LQUO, A  , S  , D  , F  , G  ,      LEFT,DOWN, UP ,RGHT,SCLN,RQUO,
+     LQUO, A  ,MS_L,MS_D,MS_R, G  ,      LEFT,DOWN, UP ,RGHT,SCLN,RQUO,
   //|----+----+----+----+----+----|     |----+----+----+----+----+----|
-     LLCT, Z  , X  , C  , V  , B  ,       N  , M  ,COMM,DOT ,SLSH,RRCT,
+     LLCT,ACL0,ACL1,ACL2,BTN4,BTN3,       N  , M  ,COMM,DOT ,SLSH,RRCT,
   //|----+----+----+----+----+----|     |----+----+----+----+----+----|
-                         LSPC,LGUI,      RENT,SALT
+                         BTN1,BTN1,      RENT,SALT
   // \------------------+----+----/      \---+----+----+--------------/
   ),
   [_YTREWQ] = KC_KEYMAP(
