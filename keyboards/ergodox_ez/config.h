@@ -40,18 +40,17 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define MOUSEKEY_MAX_SPEED      7
 #define MOUSEKEY_WHEEL_DELAY 0
 
-#define TAPPING_TOGGLE  1
+/* #define TAPPING_TOGGLE  1 */
+
 
 /* define if matrix has ghost */
 //#define MATRIX_HAS_GHOST
-
-#define TAPPING_TERM    200
-#define IGNORE_MOD_TAP_INTERRUPT // this makes it possible to do rolling combos (zx) with keys that convert to other keys on hold (z becomes ctrl when you hold it, and when this option isn't enabled, z rapidly followed by x actually sends Ctrl-x. That's bad.)
+//#define TAPPING_TERM    200
 
 /* Mechanical locking support. Use KC_LCAP, KC_LNUM or KC_LSCR instead in keymap */
-#define LOCKING_SUPPORT_ENABLE
+//#define LOCKING_SUPPORT_ENABLE
 /* Locking resynchronize hack */
-#define LOCKING_RESYNC_ENABLE
+//#define LOCKING_RESYNC_ENABLE
 
 /* key combination for command */
 #define IS_COMMAND() ( \
@@ -79,7 +78,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define RGBLIGHT_VAL_STEP 12
 
 /* fix space cadet rollover issue */
-#define DISABLE_SPACE_CADET_ROLLOVER
 
 #define RGBW_BB_TWI
 
@@ -100,7 +98,14 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 #define DEBOUNCE    10
 
-#define USB_MAX_POWER_CONSUMPTION 500
+#define ONESHOT_TIMEOUT 500
+#define USB_MAX_POWER_CONSUMPTION 100
+#define PERMISSIVE_HOLD
+#define LSPO_KEY KC_GRV
+#define IGNORE_MOD_TAP_INTERRUPT
+#define RSPC_KEY KC_QUOT
+#define DISABLE_SPACE_CADET_ROLLOVER
+#define PREVENT_STUCK_MODIFIERS
 
 // RGB backlight
 #define DRIVER_ADDR_1 0b1110100

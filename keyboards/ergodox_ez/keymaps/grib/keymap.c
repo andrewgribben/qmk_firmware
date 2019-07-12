@@ -11,7 +11,7 @@
 
 
 #define LONGPRESS_DELAY 5000
-#define LAYER_TOGGLE_DELAY 5000
+#define LAYER_OGGLE_DELAY 5000
 
 #define KC_SALT MT(MOD_LALT, KC_SPC)
 #define KC_RENT LCTL_T(KC_ENT)
@@ -21,6 +21,10 @@
 
 #define KC_RQUO LT(SYMB, KC_BSLS)
 #define KC_RRCT RGUI_T(KC_RBRC)
+
+
+#define LONGPRESS_DELAY 5000
+#define LAYER_TOGGLE_DELAY 5000
 
 
 enum custom_keycodes {
