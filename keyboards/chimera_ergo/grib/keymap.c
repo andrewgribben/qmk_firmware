@@ -10,32 +10,39 @@
 enum chimera_ergo_layers
 {
 	_QWERTY,
+	_VIMISH,
+	_YTREWQ,
 	_CAPS,
+	_A11Y,
 	_NUMPAD,
 	_SYMBOLS,
 	_MACROS,
 	_NAV
 };
 
-#define KC_NMPD TG(_NUMPAD)
-#define KC_SYMB TG(_SYMBOLS)
-#define KC_SPFN LT(_NAV,KC_4)
-#define KC_SCTL MT(MOD_LCTL, KC_2)
-#define KC_SCTR MT(MOD_LCTL, KC_9)
-#define KC_SPLT MT(MOD_LALT, KC_3)
-#define KC_SPRT MT(MOD_LALT, KC_8)
-#define KC_GBRC MT(MOD_RGUI, KC_7)
-#define KC_GQOT MT(MOD_LGUI, KC_QUOT)
-#define KC_MESC LT(_MACROS, KC_ESC)
+#define KC_LLCT LCTL_T(KC_LBRC)
+#define KC_SALT MT(MOD_LALT, KC_SPC)
+#define KC_LSPC LT(_CAPS, KC_SPC)
+#define KC_RSLA LT(_NUMPAD, KC_BSLS)
+#define KC_RENT LCTL_T(KC_ENT)
+#define KC_RRCT RGUI_T(KC_RBRC)
+#define KC_RQUO SFT_T(KC_QUOT)
+#define KC_LQUO SFT_T(KC_GRV)
+#define KC_XALT ALT_T(KC_Z)
 #define KC_INCL M(0)
 #define KC_PULL M(1)
 #define KC_PUSH M(2)
 #define KC_SCAP M(3)
 #define KC_SCOF M(4)
 #define KC_CAD LALT(LCTL(KC_DEL))
+#define KC_LTAB LT(_VIMISH, KC_TAB)
+
+
 
 #define LONGPRESS_DELAY 5000
-#define LAYER_TOGGLE_DELAY 5000
+#define LAYER_OGGLE_DELAY 5000
+
+
 
 // Fillers to make layering more clear
 #define _______ KC_TRNS
@@ -46,18 +53,69 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [_QWERTY] = KC_KEYMAP(
   //,----+----+----+----+----+----.     ,----+----+----+----+----+----.
-     LBRC, 1  ,SCTL,SPLT,SPFN, 5  ,       6  ,GBRC,SPRT,SCTR, 0  ,RBRC,
+     BSPC, 1  ,2   ,3   ,4   , 5  ,       6  ,7   ,8   ,9   , 0  ,BSPC,
   //|----+----+----+----+----+----|     |----+----+----+----+----+----|
-     MESC, Q  , W  , E  , R  , T  ,       Y  , U  , I  , O  , P  ,QUOT,
+     LTAB, Q  , W  , E  , R  , T  ,       Y  , U  , I  , O  , P  ,RSLA,
   //|----+----+----+----+----+----|     |----+----+----+----+----+----|
-     TAB , A  , S  , D  , F  , G  ,       H  , J  , K  , L  ,SCLN,ENT ,
+     LQUO, A  , S  , D  , F  , G  ,       H  , J  , K  , L  ,SCLN,RQUO,
   //|----+----+----+----+----+----|     |----+----+----+----+----+----|
-     LSPO, Z  , X  , C  , V  , B  ,       N  , M  ,COMM,DOT ,SLSH,RSPC,
+     LLCT,XALT, X  , C  , V  , B  ,       N  , M  ,COMM,DOT ,SLSH,RRCT,
   //|----+----+----+----+----+----|     |----+----+----+----+----+----|
-                         NMPD,BSPC,      SPC ,SYMB
+                         LSPC,LGUI,      RENT,SALT
   // \------------------+----+----/      \---+----+----+--------------/
   ),
-
+    [_A11Y] = KC_KEYMAP(
+  //,----+----+----+----+----+----.     ,----+----+----+----+----+----.
+     BSPC, 1  ,2   ,3   ,4   , 5  ,       6  ,7   ,8   ,9   , 0  ,BSPC,
+  //|----+----+----+----+----+----|     |----+----+----+----+----+----|
+     LTAB, Q  , W  , E  , R  , T  ,       Y  , U  , I  , O  , P  ,RSLA,
+  //|----+----+----+----+----+----|     |----+----+----+----+----+----|
+     LQUO, A  , S  , D  , F  , G  ,       H  , J  , K  , L  ,SCLN,RQUO,
+  //|----+----+----+----+----+----|     |----+----+----+----+----+----|
+     LLCT,XALT, X  , C  , V  , B  ,       N  , M  ,COMM,DOT ,SLSH,RRCT,
+  //|----+----+----+----+----+----|     |----+----+----+----+----+----|
+                         LSPC,LGUI,      RENT,SALT
+  // \------------------+----+----/      \---+----+----+--------------/
+  ),
+  [_VIMISH] = KC_KEYMAP(
+  //,----+----+----+----+----+----.     ,----+----+----+----+----+----.
+     ESC , 1  ,2   ,3   ,4   , 5  ,       6  ,7   ,8   ,9   ,0   ,MINS,
+  //|----+----+----+----+----+----|     |----+----+----+----+----+----|
+     LTAB, Q  , W  , E  , R  , T  ,       Y  ,PGDN,PGUP, O  , P  ,RSLA,
+  //|----+----+----+----+----+----|     |----+----+----+----+----+----|
+     LQUO, A  , S  , D  , F  , G  ,      LEFT,DOWN, UP ,RGHT,SCLN,RQUO,
+  //|----+----+----+----+----+----|     |----+----+----+----+----+----|
+     LLCT, Z  , X  , C  , V  , B  ,       N  , M  ,COMM,DOT ,SLSH,RRCT,
+  //|----+----+----+----+----+----|     |----+----+----+----+----+----|
+                         LSPC,LGUI,      RENT,SALT
+  // \------------------+----+----/      \---+----+----+--------------/
+  ),
+  [_YTREWQ] = KC_KEYMAP(
+  //,----+----+----+----+----+----.     ,----+----+----+----+----+----.
+     BSPC, 0  ,9   ,8   ,7   , 6  ,       6  ,7   ,8   ,9   , 0  ,BSPC,
+  //|----+----+----+----+----+----|     |----+----+----+----+----+----|
+     RSLA, P  , O  , I  , U  , Y  ,       Y  , U  , I  , O  , P , RQUO,
+  //|----+----+----+----+----+----|     |----+----+----+----+----+----|
+     RQUO,SCLN, L  , K  , J  , H  ,       H  , J  , K  , L  ,SCLN,RSPC,
+  //|----+----+----+----+----+----|     |----+----+----+----+----+----|
+     RRCT,SLSH,DOT ,COMM, M  , N  ,       N  , M  ,COMM,DOT ,SLSH,RRCT,
+  //|----+----+----+----+----+----|     |----+----+----+----+----+----|
+                         LSPC,RENT,      RENT,SALT
+  // \------------------+----+----/      \---+----+----+--------------/
+  ),
+  [_NUMPAD] = KC_KEYMAP(
+  //,----+----+----+----+----+----.     ,----+----+----+----+----+----.
+    VOLD, VOLU,MRWD,MPLY,MFFD,    ,          , 7  , 8  , 9  ,SLSH,    ,
+  //|----+----+----+----+----+----|     |----+----+----+----+----+----|
+         ,EXLM,AT  ,LCBR,RCBR,PIPE,          , 4  , 5  , 6  ,ASTR,    ,
+  //|----+----+----+----+----+----|     |----+----+----+----+----+----|
+         ,HASH,DLR ,LPRN,RPRN,GRV ,          , 1  , 2  , 3  ,MINS,    ,
+  //|----+----+----+----+----+----|     |----+----+----+----+----+----|
+         ,PERC,CIRC,LBRC,RBRC,TILD,          , 0  ,EQL ,DOT ,PLUS,    ,
+  //|----+----+----+----+----+----|     |----+----+----+----+----+----|
+                             ,    ,          ,
+  // \------------------+----+----/      \---+----+----+--------------/
+  ),
   [_CAPS] = KC_KEYMAP(
   //,----+----+----+----+----+----.     ,----+----+----+----+----+----.
          ,UNDS,    ,    ,    ,    ,          ,    ,    ,    ,    ,    ,
@@ -69,20 +127,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      SCOF,    ,    ,    ,    ,    ,          ,    ,    ,    ,    ,SCOF,
   //|----+----+----+----+----+----|     |----+----+----+----+----+----|
                              ,    ,          ,
-  // \------------------+----+----/      \---+----+----+--------------/
-  ),
-
-  [_NUMPAD] = KC_KEYMAP(
-  //,----+----+----+----+----+----.     ,----+----+----+----+----+----.
-         ,    ,    ,    ,    ,    ,          ,    ,    ,    ,MINS,    ,
-  //|----+----+----+----+----+----|     |----+----+----+----+----+----|
-         ,    ,COLN,    ,    ,    ,          , 7  , 8  , 9  ,ASTR,    ,
-  //|----+----+----+----+----+----|     |----+----+----+----+----+----|
-         ,    ,DOT ,    ,    ,    ,          , 4  , 5  , 6  ,PLUS,    ,
-  //|----+----+----+----+----+----|     |----+----+----+----+----+----|
-         ,    ,    ,    ,    ,    ,          , 1  , 2  , 3  ,SLSH,    ,
-  //|----+----+----+----+----+----|     |----+----+----+----+----+----|
-                             ,    ,          , 0
   // \------------------+----+----/      \---+----+----+--------------/
   ),
 
@@ -130,7 +174,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 
 };
-
 
 const uint16_t PROGMEM fn_actions[] = {
 
