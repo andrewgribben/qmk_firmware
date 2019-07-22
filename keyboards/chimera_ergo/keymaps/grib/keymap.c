@@ -39,8 +39,8 @@ enum chimera_ergo_layers
 
 
 
-#define LONGPRESS_DELAY 5000
-#define LAYER_TOGGLE_DELAY 5000
+#define LONGPRESS_DELAY 100
+#define LAYER_TOGGLE_DELAY 300
 
 
 
@@ -87,7 +87,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|----+----+----+----+----+----|     |----+----+----+----+----+----|
      LLCT,ACL0,ACL1,ACL2,BTN4,BTN3,       N  , M  ,COMM,DOT ,SLSH,RRCT,
   //|----+----+----+----+----+----|     |----+----+----+----+----+----|
-                         BTN1,BTN1,      RENT,SALT
+                         BTN2,BTN1,      RENT,SALT
   // \------------------+----+----/      \---+----+----+--------------/
   ),
   [_YTREWQ] = KC_KEYMAP(

@@ -73,7 +73,7 @@ COMMAND_ENABLE = yes   # Commands for debug and configuration
 CUSTOM_MATRIX = yes    # Remote matrix from the wireless bridge
 # Do not enable SLEEP_LED_ENABLE. it uses the same timer as BACKLIGHT_ENABLE
 # SLEEP_LED_ENABLE = yes  # Breathing sleep LED during USB suspend
-NKRO_ENABLE = yes		# USB Nkey Rollover - not yet supported in LUFA
+NKRO_ENABLE = no		# USB Nkey Rollover - not yet supported in LUFA
 # BACKLIGHT_ENABLE = yes  # Enable keyboard backlight functionality
 # MIDI_ENABLE = YES 		# MIDI controls
 UNICODE_ENABLE = YES 		# Unicode

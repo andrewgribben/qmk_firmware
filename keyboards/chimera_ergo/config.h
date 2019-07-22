@@ -46,7 +46,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define IGNORE_MOD_TAP_INTERRUPT
 #define RSPC_KEY KC_QUOT
 #define DISABLE_SPACE_CADET_ROLLOVER
-
+/* #define DEBOUNCE 10 */
 /* key combination for command */
 #define IS_COMMAND() ( \
     keyboard_report->mods == (MOD_BIT(KC_LSHIFT) | MOD_BIT(KC_RSHIFT)) \
@@ -57,7 +57,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *  These options are also useful to firmware size reduction.
  */
 
-#define PREVENT_STUCK_MODIFIERS
+/* #define PREVENT_STUCK_MODIFIERS */
 
 /* disable debug print */
 //#define NO_DEBUG
